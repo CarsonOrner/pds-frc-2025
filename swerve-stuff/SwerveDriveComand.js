@@ -8,6 +8,14 @@ public class SwerveDriveCommand extends CommandBase {
     private final SwerveDrive swerveDrive;
     private final Joystick joystick;
 
+    //Movement Variables
+    private final ForwardSpeedMult = 0.8;
+    private final StrafeSpeedMult = 0.8;
+    private final RotationSpeedMult = 0.8;
+
+    //Control Variables
+    private final Deadzone = 0.1;
+
     public SwerveDriveCommand(SwerveDrive swerveDrive, Joystick joystick) {
         this.swerveDrive = swerveDrive;
         this.joystick = joystick;
@@ -23,14 +31,14 @@ public class SwerveDriveCommand extends CommandBase {
         double rotation = joystick.getRawAxis(4); // Z-axis for rotation
 
         // Apply deadband
-        forward = Math.abs(forward) > 0.1 ? forward : 0.0;
-        strafe = Math.abs(strafe) > 0.1 ? strafe : 0.0;
-        rotation = Math.abs(rotation) > 0.1 ? rotation : 0.0;
+        forward = Math.abs(forward) > Deadzone ? forward : 0.0;
+        strafe = Math.abs(strafe) > Deadzone ? strafe : 0.0;
+        rotation = Math.abs(rotation) > Deadzone ? rotation : 0.0;
 
         // Optional: Scale inputs for finer control
-        forward *= 0.8;
-        strafe *= 0.8;
-        rotation *= 0.6;
+        forward *= ForwardSpeedMult;
+        strafe *= StrafeSpeedMult;
+        rotation *= RotationSpeedMult;
 
         // Create chassis speeds
         ChassisSpeeds speeds = new ChassisSpeeds(forward, strafe, rotation);
