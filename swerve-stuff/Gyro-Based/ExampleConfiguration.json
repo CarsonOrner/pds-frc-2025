@@ -1,0 +1,17 @@
+{
+  "driveMotor": {
+    "type": "SparkMAX",
+    "canID": 1,
+    "inverted": false
+  },
+  "steerMotor": {
+    "type": "SparkMAX",
+    "canID": 2,
+    "inverted": false
+  },
+  "steerEncoder": {
+    "type": "CANCoder",
+    "canID": 3,
+    "offset": 0.0
+  }
+}

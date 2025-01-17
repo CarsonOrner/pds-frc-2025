@@ -1,0 +1,27 @@
+
+Libraries Used in the Swerve Drive Command:
+
+1. **WPILib** (FRC Official Libraries)
+   - Provides basic robotics control and commands.
+   - Link: https://github.com/wpilibsuite/allwpilib
+
+2. **SwerveDriveSpecialties** (SwerveDrive Library for FRC)
+   - A generic library for swerve drive implementation in FRC.
+   - Link: https://github.com/Swervedrivespecialties/Swervelib
+
+3. **navX2** (KAUAI Labs navX2 Library for FRC)
+   - A library for interfacing with the navX2 gyro/IMU sensor.
+   - Link: https://github.com/kauailabs/shipwright
+
+4. **CTRE Phoenix** (CTRE Motor Controllers and Sensors Library)
+   - Provides libraries for controlling motor controllers like TalonSRX and VictorSPX.
+   - Link: https://www.ctr-electronics.com/phoenix-software.html
+
+5. **Spark MAX** (REV Robotics Motor Controllers Library)
+   - Provides libraries for controlling REV Robotics SPARK MAX motor controllers.
+   - Link: https://www.revrobotics.com/spark-max/
+
+6. **Java** (Programming Language)
+   - Language used for coding the FRC robot.
+   - Link: https://www.oracle.com/java/
+
